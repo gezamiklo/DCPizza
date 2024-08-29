@@ -10,7 +10,6 @@ import SwiftUI
 import Combine
 import Domain
 import Resolver
-import Introspect
 
 struct MenuListView: View, Resolving {
     @StateObject private var _viewModel = Resolver.resolve(MenuListViewModel.self)
@@ -35,9 +34,8 @@ struct MenuListView: View, Resolving {
                 }
             }
             .listStyle(PlainListStyle())
-            .introspectTableView {
-                $0.separatorStyle = .none
-            }
+            .listSectionSeparator(.hidden)
+            .listRowSeparator(.hidden)
             .navigationTitle(Text("NENNO'S PIZZA"))
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {

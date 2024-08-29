@@ -9,7 +9,7 @@
 import SwiftUI
 import Resolver
 import Domain
-import Introspect
+import SwiftUIIntrospect
 
 struct DrinksListView: View {
     @Environment(\.presentationMode) private var _mode: Binding<PresentationMode>
@@ -26,11 +26,9 @@ struct DrinksListView: View {
                 .listRowInsets(EdgeInsets())
             }
         }
+        .listRowSeparator(.visible)
+        .listRowSeparatorTint(KColors.listSeparator)
         .listStyle(PlainListStyle())
-        .introspectTableView(customize: {
-            $0.separatorStyle = .singleLine
-            $0.tableFooterView = UIView()
-        })
         .navigationTitle(Text("DRINKS"))
         .navigationBarTitleDisplayMode(.inline)
         .backNavigationBarItems(_mode)

@@ -16,4 +16,5 @@ struct KColors {
     static let cTint = Color("tintColor")
     static let yellow = Color("buttonColor")
     static let price = Color("priceColor")
+    static let listSeparator = Color("listSeparator")
 }

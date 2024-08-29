@@ -9,7 +9,6 @@
 import SwiftUI
 import Domain
 import Resolver
-import Introspect
 
 struct CartListView: View, Resolving {
     @Environment(\.presentationMode) private var _mode: Binding<PresentationMode>

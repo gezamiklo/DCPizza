@@ -32,9 +32,8 @@ struct IngredientsListView: View {
                         // .buttonStyle(PlainButtonStyle())
                     }
                 }
-                .introspectTableView {
-                    $0.separatorStyle = .singleLine
-                }
+                .listRowSeparator(.visible)
+                .listRowSeparatorTint(KColors.listSeparator)
 
                 if self._isShowFooter {
                     _FooterView(geometry: geometry)
